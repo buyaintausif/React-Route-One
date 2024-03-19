@@ -1,15 +1,19 @@
 
+import PropTypes from 'prop-types';
 
-import React from 'react';
 
 const Link = ({route}) => {
-    const{path,name}=route;
+    
     return (
         <li className='mr-10' >
 
-        <a href={path}> {name}</a>
+        <a href={route.path}> {route.name}</a>
       </li>
     );
 };
+
+Link.protoType={
+    route:PropTypes.object,
+}
 
 export default Link;
